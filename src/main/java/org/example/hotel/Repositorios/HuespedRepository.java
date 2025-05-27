@@ -1,6 +1,6 @@
-package Repositorios;
+package org.example.hotel.Repositorios;
 
-import Entidades.Huesped;
+import org.example.hotel.Entidades.Huesped;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HuespedRepository extends JpaRepository<Huesped, Integer> {

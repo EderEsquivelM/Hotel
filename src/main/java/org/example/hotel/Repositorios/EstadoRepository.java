@@ -1,6 +1,6 @@
-package Repositorios;
+package org.example.hotel.Repositorios;
 
-import Entidades.Estado;
+import org.example.hotel.Entidades.Estado;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

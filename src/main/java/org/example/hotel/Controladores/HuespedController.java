@@ -1,7 +1,7 @@
-package Controladores;
+package org.example.hotel.Controladores;
 
-import Entidades.Huesped;
-import Repositorios.HuespedRepository;
+import org.example.hotel.Entidades.Huesped;
+import org.example.hotel.Repositorios.HuespedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ public class HuespedController {
     @Autowired
     private HuespedRepository huespedRepository;
 
-    @GetMapping(path = "/hola")
+    @GetMapping(path = "")
     public @ResponseBody Iterable<Huesped> getHuespeds() {
         return huespedRepository.findAll();
     }
@@ -22,13 +22,13 @@ public class HuespedController {
     }
 
 
-    @PostMapping(path = "/")
-    public @ResponseBody String addHuesped(@RequestBody Huesped usuario) {
-        huespedRepository.save(usuario);
-        return "Usuario agregado con exito";
+    @PostMapping(path = "")
+    public @ResponseBody String addHuesped(@RequestBody Huesped huesped) {
+        huespedRepository.save(huesped);
+        return "Huesped agregado con exito";
     }
 
-    @PutMapping(path = "/usuarios/{id}")
+    @PutMapping(path = "/{id}")
     public @ResponseBody String updateUsuario(@PathVariable (name="id") Integer id,@RequestBody Huesped huesped) {
         Huesped huespedViejo=huespedRepository.getReferenceById(id);
         huespedViejo.setNombre(huesped.getNombre());

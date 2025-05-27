@@ -1,16 +1,13 @@
-package Entidades;
+package org.example.hotel.Entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Municipio {
     @Id
     private Integer idMunicipio;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idEstado")
     private Estado idEstado;
 
