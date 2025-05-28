@@ -16,7 +16,7 @@ public class VwHuesped {
     private String estado;
     private String municipio;
 
-    // Getters y setters
+
 
     public Integer getIdHuesped() {
         return idHuesped;
