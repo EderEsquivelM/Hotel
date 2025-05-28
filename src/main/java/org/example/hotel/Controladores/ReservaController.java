@@ -1,7 +1,6 @@
 package org.example.hotel.Controladores;
 
 import org.example.hotel.Entidades.Reserva;
-import org.example.hotel.Entidades.Tarjeta;
 import org.example.hotel.Repositorios.ReservaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

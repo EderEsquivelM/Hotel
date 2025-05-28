@@ -2,6 +2,7 @@ package org.example.hotel.Entidades;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -27,8 +28,8 @@ public class ReservaHabitacion {
     @JoinColumn(name = "idEmpleadoCheckout")
     private Empleado idEmpleadoCheckout;
 
-    private Date fechaCheckin;
-    private Date fechaCheckout;
+    private LocalDate fechaCheckin;
+    private LocalDate fechaCheckout;
     private String observacionesCheckin;
     private String observacionesCheckout;
 
@@ -76,19 +77,19 @@ public class ReservaHabitacion {
         this.idEmpleadoCheckout = idEmpleadoCheckout;
     }
 
-    public Date getFechaCheckin() {
+    public LocalDate getFechaCheckin() {
         return fechaCheckin;
     }
 
-    public void setFechaCheckin(Date fechaCheckin) {
+    public void setFechaCheckin(LocalDate fechaCheckin) {
         this.fechaCheckin = fechaCheckin;
     }
 
-    public Date getFechaCheckout() {
+    public LocalDate getFechaCheckout() {
         return fechaCheckout;
     }
 
-    public void setFechaCheckout(Date fechaCheckout) {
+    public void setFechaCheckout(LocalDate fechaCheckout) {
         this.fechaCheckout = fechaCheckout;
     }
 

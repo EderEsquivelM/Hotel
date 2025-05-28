@@ -1,7 +1,6 @@
 package org.example.hotel.Controladores;
 
 
-import org.example.hotel.Entidades.Empleado;
 import org.example.hotel.Entidades.Tarjeta;
 import org.example.hotel.Repositorios.TarjetaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ public class TarjetaController {
     private TarjetaRepository tarjetaRepository;
 
     @GetMapping(path = "")
-    public @ResponseBody Iterable<Tarjeta> gettarjetas() {
+    public @ResponseBody Iterable<Tarjeta> getTarjetas() {
         return tarjetaRepository.findAll();
     }
 

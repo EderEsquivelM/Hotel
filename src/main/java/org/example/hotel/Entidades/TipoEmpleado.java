@@ -11,20 +11,14 @@ public class TipoEmpleado {
 
     private String nombre;
 
-    public TipoEmpleado(int idTipoEmpleado, String nombre) {
-        this.idTipoEmpleado = idTipoEmpleado;
-        this.nombre = nombre;
-    }
 
-    public TipoEmpleado() {
-    }
 
-    public int getIdEmpleado() {
+    public int getIdTipoEmpleado() {
         return idTipoEmpleado;
     }
 
-    public void setIdEmpleado(int idEmpleado) {
-        this.idTipoEmpleado = idEmpleado;
+    public void setIdTipoEmpleado(int idTipoEmpleado) {
+        this.idTipoEmpleado = idTipoEmpleado;
     }
 
     public String getNombre() {

@@ -2,7 +2,8 @@ package org.example.hotel.Entidades;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 public class Tarjeta {
@@ -10,7 +11,7 @@ public class Tarjeta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idTarjeta;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "idHuesped")
     private Huesped idHuesped;
 
@@ -18,7 +19,7 @@ public class Tarjeta {
     private String banco;
     private String nombreTitular;
     private String numeroTarjeta;
-    private Date fechaCaducidad;
+    private LocalDate fechaCaducidad;
 
     public Tarjeta() {
 
@@ -72,11 +73,11 @@ public class Tarjeta {
         this.numeroTarjeta = numeroTarjeta;
     }
 
-    public Date getFechaCaducidad() {
+    public LocalDate getFechaCaducidad() {
         return fechaCaducidad;
     }
 
-    public void setFechaCaducidad(Date fechaCaducidad) {
+    public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
     }
 }

@@ -28,7 +28,7 @@ public class Empleado {
 
     private double salario;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "idTipoEmpleado")
     private TipoEmpleado idTipoEmpleado;
 

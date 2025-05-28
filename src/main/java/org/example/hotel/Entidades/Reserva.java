@@ -2,6 +2,7 @@ package org.example.hotel.Entidades;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -14,8 +15,8 @@ public class Reserva {
     @JoinColumn(name = "idHuesped")
     private Huesped idHuesped;
 
-    private Date fechaEntrada;
-    private Date fechaSalida;
+    private LocalDate fechaEntrada;
+    private LocalDate fechaSalida;
     private String estadoReserva="Pendiente";
 
     public Reserva() {
@@ -37,11 +38,11 @@ public class Reserva {
         this.idHuesped = idHuesped;
     }
 
-    public Date getFechaEntrada() {
+    public LocalDate getFechaEntrada() {
         return fechaEntrada;
     }
 
-    public void setFechaEntrada(Date fechaEntrada) {
+    public void setFechaEntrada(LocalDate fechaEntrada) {
         this.fechaEntrada = fechaEntrada;
     }
 
@@ -53,11 +54,11 @@ public class Reserva {
         this.estadoReserva = estadoReserva;
     }
 
-    public Date getFechaSalida() {
+    public LocalDate getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(Date fechaSalida) {
+    public void setFechaSalida(LocalDate fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 }
