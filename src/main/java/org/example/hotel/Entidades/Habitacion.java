@@ -5,9 +5,9 @@ import jakarta.persistence.*;
 @Entity
 public class Habitacion {
     @Id
-    private int idHabitacion;
+    private Integer idHabitacion;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "idTipoHabitacion")
     private TipoHabitacion tipoHabitacion;
 
@@ -15,7 +15,7 @@ public class Habitacion {
     private Integer piso;
     private String disponible;
 
-    public Habitacion(int idHabitacion, TipoHabitacion tipoHabitacion, Integer numero, Integer piso, String disponible) {
+    public Habitacion(Integer idHabitacion, TipoHabitacion tipoHabitacion, Integer numero, Integer piso, String disponible) {
         this.idHabitacion = idHabitacion;
         this.tipoHabitacion = tipoHabitacion;
         this.numero = numero;
@@ -24,6 +24,10 @@ public class Habitacion {
     }
 
     public Habitacion() {
+    }
+
+    public void setIdHabitacion(Integer idHabitacion) {
+        this.idHabitacion = idHabitacion;
     }
 
     public TipoHabitacion getTipoHabitacion() {

@@ -24,4 +24,8 @@ public class HabitacionController {
         return habitacionRepository.findById(id).orElse(null);
     }
 
+    @GetMapping("/tipo/{idTipo}")
+    public @ResponseBody List<Habitacion> getHabitacionesPorTipo(@PathVariable("idTipo") Integer idTipo) {
+        return habitacionRepository.findByTipoHabitacionIdTipoHabitacion(idTipo);
+    }
 }

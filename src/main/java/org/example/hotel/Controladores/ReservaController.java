@@ -24,7 +24,7 @@ public class ReservaController {
     @PostMapping(path = "")
     public @ResponseBody String addReserva(@RequestBody Reserva reservan) {
         reservaRepository.save(reservan);
-        return "Tarjeta agregada con exito";
+        return "Reserva agregada con exito";
     }
 
     @PutMapping(path = "/{id}")
